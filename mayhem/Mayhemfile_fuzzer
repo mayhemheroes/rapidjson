@@ -1,0 +1,9 @@
+project: rapidjson
+target: fuzzer
+cmds:
+  - cmd: /mayhem/fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzzer.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer/testsuite
